@@ -19,8 +19,9 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+    # Using v4 of actions/checkout for better performance and security
+    # See https://github.blog/2023-09-22-github-actions-transitioning-from-node-16-to-node-20/
+    - uses: actions/checkout@v4
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
